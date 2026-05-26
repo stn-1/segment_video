@@ -1,0 +1,18 @@
+# Stage 1 — scene detection
+scenedetect[opencv]
+
+# Stage 2 — DINOv2 (torch/torchvision version depends on your CUDA version)
+# CUDA 11.x: pip install torch==2.0.0 torchvision==0.15.0 --extra-index-url https://download.pytorch.org/whl/cu117
+# CUDA 12.x: pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+Pillow>=9.0.0
+omegaconf
+
+# Stage 3 — InternVL2-2B caption
+transformers>=4.37.0
+accelerate>=0.24.0
+einops
+timm
+sentencepiece
